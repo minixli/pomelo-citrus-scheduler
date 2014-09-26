@@ -7,14 +7,14 @@ $:.push File.expand_path('../lib', __FILE__)
 require 'citrus-scheduler/version'
 
 Gem::Specification.new do |spec|
-  spec.name        = 'citrus-scheduler'
+  spec.name        = 'pomelo-citrus-scheduler'
   spec.version     = CitrusScheduler::VERSION
   spec.platform    = Gem::Platform::RUBY
   spec.authors     = ['MinixLi']
   spec.email       = 'MinixLi1986@gmail.com'
-  spec.description = %q{Citrus Scheduler}
-  spec.summary     = %q{Citrus Scheduler}
-  spec.homepage    = 'http://citrus.inspawn.com'
+  spec.description = %q{pomelo-citrus-scheduler is a simple clone of pomelo-scheduler, it is a schedule tool and provide a schedule module which is highly efficient and can support large number job schedule}
+  spec.summary     = %q{pomelo-scheduler clone written in Ruby using EventMachine}
+  spec.homepage    = 'https://github.com/minixli/pomelo-citrus-scheduler'
   spec.license     = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
@@ -22,6 +22,6 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_dependency('algorithms')
-  spec.add_dependency('eventmachine')
+  spec.add_dependency('algorithms', '~> 0')
+  spec.add_dependency('eventmachine', '~> 0')
 end
